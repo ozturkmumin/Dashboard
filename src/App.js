@@ -1,4 +1,5 @@
 import "./scss/styles.scss";
+import "./scss/reset.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 export default function App() {
@@ -59,27 +60,53 @@ export default function App() {
                 </div>
                 <div className="row">
                   <div className="col-lg-4">
-                      <div className="first-block d-flex flex-column">
-                        <p>Customers</p>
-                        <p></p>
-                      </div>
+                    <div className="first-block text-center p-3">
+                      <p>Customers</p>
+                      <p>54.323</p>
+                    </div>
                   </div>
-                  
-                  <div className="col-lg-4">
 
+                  <div className="col-lg-4">
+                    <div className="second-block text-center p-3">
+                      <p>Income</p>
+                      <p>$980.632</p>
+                    </div>
                   </div>
-                  
-                  <div className="col-lg-4">
 
+                  <div className="col-lg-4">
+                    <div className="third-block text-center p-3">
+                      <p>Products Sold</p>
+                      <p>5.940</p>
+                    </div>
                   </div>
                 </div>
+              </div>
+              <div className="mt-3 h2 fw-bold">
+                Marketplace
+              </div>
+              <div className="d-flex gap-3">
+                <div className="d-flex flex-column gap-3">
+                  <div className="bg-light special-rounded d-flex flex-column p-4"><p> Data Analytics <br />
+                    Overwiev
+                  </p>
+                    <p>
+                      See how your account grow and how you can boost it.
+                    </p>
+                  </div>
+                  <div className="bg-light special-rounded p-4">
+                    Finance flow
+                  </div>
+                </div>
+                <div className="p-4 bg-light">
+                      Start
+                    </div>
               </div>
             </div>
             <div className="col-lg-4">
               <div className="summary">
-              <h2>
-                Summary
-              </h2>
+                <h2>
+                  Summary
+                </h2>
               </div>
             </div>
           </div>

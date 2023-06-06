@@ -1,3 +1,7 @@
+//Variables
+$white: #ffffff;
+
+
 body {
   background-color: #5c6aed !important;
   min-height: 100vh;
@@ -7,4 +11,16 @@ body {
   font-family: sans-serif;
   border-radius: 30px;
   background-color: #f1f1f9;
+  .first-block,.second-block,.third-block{
+    background-color: #686af1;
+    min-height: 50px;
+    border-radius: 20px;
+    color: $white;
+    p{
+      margin-bottom: 0;
+    }
+  }
+  .special-rounded{
+    border-radius: 20px;
+  }
 }
