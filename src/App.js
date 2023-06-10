@@ -3,15 +3,11 @@ import "./scss/reset.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
-
-ChartJS.register(ArcElement, Tooltip, Legend);
-
-<Doughnut data={...} />
+import Newcomponent from "./components/chart-component"
 export default function App() {
-  
+
   return (
-    
+
     <div className="app-body">
       <div className="container">
         <div className="App p-3 mt-5">
@@ -92,7 +88,7 @@ export default function App() {
               <div className="mt-3 h2 fw-bold">
                 Marketplace
               </div>
-              <div className="d-flex gap-3 bg-light">
+              <div className="d-flex gap-3 bg-light data-analytics special-rounded ">
                 <div className="d-flex flex-column gap-3">
                   <div className="bg-light special-rounded d-flex flex-column p-4"><p> Data Analytics <br />
                     Overwiev
@@ -104,11 +100,17 @@ export default function App() {
 
                 </div>
                 <div className="p-4 bg-light">
-                  Start
+                  <Newcomponent />
                 </div>
               </div>
-              <div className="bg-light special-rounded p-4 mt-3">
-                Finance flow
+              <div className="finance-flow bg-light special-rounded d-flex justify-content-between align-items-center mt-4">
+                <div className="d-flex flex-column  p-4 mt-3">
+                  <p>Finance flow</p>
+                  <p className="fw-bold">$2,530</p>
+                </div>
+                <div>
+                  Chart
+                </div>
               </div>
             </div>
             <div className="col-lg-4">
