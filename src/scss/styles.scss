@@ -4,6 +4,10 @@ $primary:#686af1;;
 .primary{
   color: $primary;
 }
+.section-xs{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 body {
   background-color: #5c6aed !important;
   min-height: 100vh;
@@ -65,4 +69,12 @@ body {
   .summary{
     background-color: $white;
   }
+  .recent-order{
+    .see-btn{
+      
+    }
+  }
+}
+.border-right{
+  border-right: 1px solid #dadada;
 }
