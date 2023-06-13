@@ -38,7 +38,9 @@ body {
       margin-bottom: 0;
     }
   }
-
+  .third-block{
+    flex: 1;
+  }
   .special-rounded {
     border-radius: 20px;
   }
@@ -102,4 +104,7 @@ body {
 }
 .border-right{
   border-right: 1px solid #dadada;
+}
+.flex-setting{
+  flex: 1;
 }

@@ -2,7 +2,7 @@
 export default function App() {
     const upgradeimg = require('img/upgrade-pro/upgrade-item.jpg')
     return (
-        <div className="d-flex flex-column justify-content-center align-items-center upgrade-pro h-100 special-rounded">
+        <div className="d-flex flex-column justify-content-center align-items-center upgrade-pro h-100 special-rounded mt-lg-0 mt-3">
               <div className='primary fw-bold border-bottom'>UPGRADE TO PRO</div>
               <div>
                 <img className='mw-100' src={upgradeimg}  />

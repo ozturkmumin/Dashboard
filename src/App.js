@@ -102,15 +102,15 @@ export default function App() {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-lg-4">
+                  <div className="col-lg-4 col-4 d-flex">
                     <HeadCard headTitle="Customers" headPrice="54.233" />
                   </div>
 
-                  <div className="col-lg-4">
+                  <div className="col-lg-4 col-4 d-flex">
                     <HeadCard headTitle="Income" headPrice="$980.632" />
                   </div>
 
-                  <div className="col-lg-4">
+                  <div className="col-lg-4 col-4 d-flex">
                     <HeadCard headTitle="Products Sold" headPrice="5.940" />
                   </div>
 
@@ -145,13 +145,11 @@ export default function App() {
 
               </div>
               <div>
-                <RecentOrder  title="Recent Orders"  seebtn="SEE ALL"/>
+                <RecentOrder title="Recent Orders" seebtn="SEE ALL" />
               </div>
             </div>
             <div className="col-lg-4 special-rounded summary p-4">
-              <div>
-                <Summary title="Summary"/>
-              </div>
+              <Summary title="Summary" />
             </div>
           </div>
         </div>
