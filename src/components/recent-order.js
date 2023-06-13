@@ -1,4 +1,4 @@
-export default function HeadCard({ title, seebtn }) {
+export default function RecentOrder({ title, seebtn }) {
     return (
         <div>
             <div className="d-flex justify-content-between  p-3">

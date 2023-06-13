@@ -5,6 +5,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import Financeflow from "./components/finance-flow"
 import Newcomponent from "./components/chart-component"
 import Upgradepro from "./components/upgrade-pro"
+import Summary from "./components/summary"
 import RecentOrder from "./components/recent-order"
 import HeadCard from "components/head-card";
 export default function App() {
@@ -149,9 +150,7 @@ export default function App() {
             </div>
             <div className="col-lg-4 special-rounded summary p-4">
               <div>
-                <h2>
-                  Summary
-                </h2>
+                <Summary title="Summary"/>
               </div>
             </div>
           </div>

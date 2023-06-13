@@ -8,6 +8,14 @@ $primary:#686af1;;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.section-md{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.section-lg{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 body {
   background-color: #5c6aed !important;
   min-height: 100vh;
@@ -67,7 +75,24 @@ body {
     opacity: 60%;
   }
   .summary{
-    background-color: $white;
+    .title{
+      color: $primary;
+    }
+    background-color: #f9f8fd;
+    .summary-container{
+      background-color: #fefefe;
+      position: relative;
+      .summary-plus{
+        width: 40px;
+        height: 40px;
+        color: $white;
+        background-color: #f83851;
+        position: absolute;
+        border-radius: 50%;
+        top: 50px;
+        right: -18px;
+      }
+    }
   }
   .recent-order{
     .see-btn{
