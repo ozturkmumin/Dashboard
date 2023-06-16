@@ -1,4 +1,4 @@
-
+import ChartComponent from "components/chart";
 export default function App() {
     return (
         <div>
@@ -10,6 +10,7 @@ export default function App() {
                 </div>
                 <div>
                     Chart
+                    <ChartComponent />
                 </div>
             </div>
         </div>

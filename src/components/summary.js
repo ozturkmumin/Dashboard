@@ -78,13 +78,13 @@ export default function Summary({ title }) {
                         type="text"
                         value={searchQuery}
                         onChange={handleSearch}
-                        placeholder="Search by street..."
+                        placeholder="Search Person"
                     />
                     {filteredUsers.length === 0 ? (
                         <div>No users found.</div>
                     ) : (
                         filteredUsers.map((user) => (
-                            <div key={user.id}>{user.address.street}</div>
+                            <div className="data-div" key={user.id}>{user.address.street}</div>
                         ))
                     )}
                 </div>

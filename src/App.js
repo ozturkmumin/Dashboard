@@ -9,7 +9,6 @@ import Summary from "./components/summary"
 import RecentOrder from "./components/recent-order"
 import HeadCard from "components/head-card";
 
-
 export default function App() {
 
   return (
