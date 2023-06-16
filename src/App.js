@@ -8,7 +8,7 @@ import Upgradepro from "./components/upgrade-pro"
 import Summary from "./components/summary"
 import RecentOrder from "./components/recent-order"
 import HeadCard from "components/head-card";
-import UserData from "data/data"
+
 export default function App() {
 
   return (
