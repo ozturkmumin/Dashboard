@@ -1,5 +1,15 @@
-import ChartComponent from "components/chart";
+import { useState } from "react";
+import BarChart from "./bar-chart";
+
 export default function App() {
+    const [userData , setUserData] = useState({
+        labels: userData.map((data) => data.year),
+        datasets:[{
+            label:"Users Gained",
+            data :userData.map((data) => data.userGain),
+        }]
+
+    });
     return (
         <div>
             <div className="finance-flow bg-light special-rounded d-flex justify-content-between align-items-center mt-4">
@@ -9,8 +19,7 @@ export default function App() {
                     <p className="fw-lighter">September 2023</p>
                 </div>
                 <div>
-                    Chart
-                    <ChartComponent />
+                    <BarChart/>
                 </div>
             </div>
         </div>
