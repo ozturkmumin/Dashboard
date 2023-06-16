@@ -1,4 +1,29 @@
+import { useState, useEffect } from "react";
 export default function Summary({ title }) {
+    const [users, setUsers] = useState([]);
+    const [filteredUsers, setFilteredUsers] = useState([]);
+    const [searchQuery, setSearchQuery] = useState("");
+
+    useEffect(() => {
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then((res) => res.json())
+            .then((data) => {
+                setUsers(data);
+                setFilteredUsers(data);
+            })
+            .catch((error) => console.log(error));
+    }, []);
+
+    const handleSearch = (e) => {
+        const searchValue = e.target.value;
+        setSearchQuery(searchValue);
+
+        const filteredData = users.filter((user) => {
+            const { street } = user.address;
+            return street.includes(searchValue);
+        });
+        setFilteredUsers(filteredData)
+    }
     return (
         <div>
             <div>
@@ -44,6 +69,24 @@ export default function Summary({ title }) {
                     <div className="fw-bold text-secondary-emphasis fs-6">
                         SEE ALL
                     </div>
+                </div>
+            </div>
+            <div className="section-lg">
+                <div>
+                    <h1>Users</h1>
+                    <input
+                        type="text"
+                        value={searchQuery}
+                        onChange={handleSearch}
+                        placeholder="Search by street..."
+                    />
+                    {filteredUsers.length === 0 ? (
+                        <div>No users found.</div>
+                    ) : (
+                        filteredUsers.map((user) => (
+                            <div key={user.id}>{user.address.street}</div>
+                        ))
+                    )}
                 </div>
             </div>
         </div>
