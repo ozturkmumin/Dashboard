@@ -1,68 +1,41 @@
-import { useState } from "react";
+import React from "react";
+import { Card, Title, BarChart, Subtitle } from "@tremor/react";
 
-import { Card, Title, AreaChart } from "@tremor/react";
-export default function App() {
-    const chartdata = [
-        {
-            date: "Jan 22",
-            SemiAnalysis: 2890,
-            "The Pragmatic Engineer": 2338,
-        },
-        {
-            date: "Feb 22",
-            SemiAnalysis: 2756,
-            "The Pragmatic Engineer": 2103,
-        },
-        {
-            date: "Mar 22",
-            SemiAnalysis: 3322,
-            "The Pragmatic Engineer": 2194,
-        },
-        {
-            date: "Apr 22",
-            SemiAnalysis: 3470,
-            "The Pragmatic Engineer": 2108,
-        },
-        {
-            date: "May 22",
-            SemiAnalysis: 3475,
-            "The Pragmatic Engineer": 1812,
-        },
-        {
-            date: "Jun 22",
-            SemiAnalysis: 3129,
-            "The Pragmatic Engineer": 1726,
-        },
-    ];
-    const dataFormatter = (number) => {
-        return "$ " + Intl.NumberFormat("us").format(number).toString();
-    };
+const chartData = [
+  {
+    name: "Amphibians",
+    "Number of threatened species": 2488,
+  },
+  {
+    name: "Birds",
+    "Number of threatened species": 1445,
+  },
+  {
+    name: "Crustaceans",
+    "Number of threatened species": 743,
+  },
+];
 
+const dataFormatter = (number) => {
+  return "$ " + Intl.NumberFormat("us").format(number).toString();
+};
 
-    return (
-        <div>
-            <div>
-                <Card>
-                    <Title>Newsletter revenue over time (USD)</Title>
-                    <AreaChart
-                        className="h-72 mt-4"
-                        data={chartdata}
-                        index="date"
-                        categories={["SemiAnalysis", "The Pragmatic Engineer"]}
-                        colors={["indigo", "cyan"]}
-                        valueFormatter={dataFormatter}
-                    />
-                </Card>
-            </div>
-            <div className="finance-flow bg-light special-rounded d-flex justify-content-between align-items-center mt-4">
-                <div className="d-flex flex-column  p-4 mt-3">
-                    <p>Finance flow</p>
-                    <p className="fw-bold mt-5">$2,530</p>
-                    <p className="fw-lighter">September 2023</p>
-                </div>
+const BarChartComponent = () => (
+  <Card>
+    <Title>Number of species threatened with extinction (2021)</Title>
+    <Subtitle>
+      The IUCN Red List has assessed only a small share of the total known species in the world.
+    </Subtitle>
+    <BarChart
+      className="mt-6"
+      data={chartData}
+      index="name"
+      categories={["Number of threatened species"]}
+      colors={["blue"]}
+      valueFormatter={dataFormatter}
+      yAxisWidth={48}
+    />
+  </Card>
+);
 
-            </div>
-        </div>
-    )
-
-}
+export default BarChartComponent;

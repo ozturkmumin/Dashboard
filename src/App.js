@@ -1,14 +1,10 @@
-import "./scss/styles.scss";
-import "./scss/reset.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
 import Financeflow from "./components/finance-flow"
 import Newcomponent from "./components/chart-component"
 import Upgradepro from "./components/upgrade-pro"
 import Summary from "./components/summary"
 import RecentOrder from "./components/recent-order"
 import HeadCard from "components/head-card";
-
+import Calendar from "components/calendar";
 export default function App() {
 
   return (

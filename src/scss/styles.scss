@@ -23,7 +23,7 @@ $primary: #686af1;
 }
 
 body {
-  background-color: #5c6aed !important;
+  background-color: #5c6aed;
   min-height: 100vh;
 }
 
@@ -115,7 +115,8 @@ body {
     }
 
     .data-div {
-      border: 1px solid #686af1;
+      border: 1px solid #686af140;
+      width: 100%;
       padding: 0.3rem;
       margin: 0.3rem;
       border-radius: 10px;
@@ -136,7 +137,8 @@ body {
 
 input {
   width: 100%;
-  border-radius: 20px;
-  padding: 0.4rem;
+  border-radius: 10px;
+  padding: 0.3rem;
+  margin:0.3rem;
   border: 1px solid #dadada;
 }
