@@ -20,7 +20,7 @@ const events = [
 
 const MyCalendar = () => {
   return (
-    <div style={{ height: "500px" }}>
+    <div className="calendar-animate">
       <Calendar
         localizer={localizer}
         events={events}

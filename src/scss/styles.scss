@@ -64,6 +64,14 @@ body {
     border-top: 3px solid #dadada;
     border-bottom: 3px solid $primary;
     border-left: 3px solid $primary;
+    transition: 0.3s all linear;
+    &:hover{
+      border-right: 3px solid $primary;
+      border-top: 3px solid $primary;
+      border-bottom: 3px solid #dadada;
+      border-right: 3px solid #dadada;
+      cursor: pointer;
+    }
 
   }
 
@@ -158,4 +166,34 @@ input {
 .expanded-page.active {
   opacity: 1;
   transform: scale(1);
+}
+.c-pointer{
+  cursor: pointer;
+}
+@keyframes calendar {
+  from {height: 150px; width: 150px;}
+  to {height: 500px; width: 500px;}
+}
+
+/* The element to apply the animation to */
+.calendar-animate {
+  width: 500px;
+  height: 500px;
+  margin-bottom: 100px;
+  animation-duration: 2s;
+  animation-name: calendar;
+}
+
+//Finance Flow
+.bar-setting{
+  background-color: white;
+  height: 50lvw;
+  width: 100%;
+
+  .colors{
+    color: blue;
+  }
+}
+.recharts-legend-wrapper{
+  display: none;
 }

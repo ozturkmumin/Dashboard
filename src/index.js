@@ -5,7 +5,7 @@ import "./scss/reset.scss";
 import "./scss/styles.scss";
 
 import App from "./App";
-
+import { AreaChart } from "@tremor/react";
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
